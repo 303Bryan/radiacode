@@ -7,6 +7,8 @@ This guide explains how to install and configure the Radiacode Home Assistant in
 - Home Assistant 2023.8 or later
 - Radiacode device (RadiaCode-10x or compatible)
 - USB cable or Bluetooth capability (Linux only for Bluetooth)
+- For USB support: `usb` library (PyUSB)
+- For Bluetooth support: `bluepy` library (Linux only)
 
 ## Installation Methods
 
@@ -18,10 +20,13 @@ This guide explains how to install and configure the Radiacode Home Assistant in
    # Copy the custom_components/radiacode folder to your Home Assistant config directory
    ```
 
-2. **Install Dependencies**
+2. **Install Dependencies** (if needed)
    ```bash
-   # In your Home Assistant environment, install the radiacode library
-   pip install radiacode>=0.2.0
+   # For USB support (usually already available in Home Assistant)
+   pip install usb
+   
+   # For Bluetooth support on Linux
+   pip install bluepy
    ```
 
 3. **Restart Home Assistant**

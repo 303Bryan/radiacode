@@ -17,10 +17,13 @@ This integration provides Home Assistant support for [Radiacode](https://www.rad
 ### Method 1: Manual Installation (Recommended)
 
 1. Download this integration folder to your Home Assistant `config/custom_components/radiacode/` directory
-2. Restart Home Assistant
-3. Go to **Settings** → **Devices & Services** → **Integrations**
-4. Click **+ Add Integration** and search for "Radiacode"
-5. Follow the setup wizard
+2. Install dependencies (if needed):
+   - For USB support: `pip install usb` (usually already available in Home Assistant)
+   - For Bluetooth support on Linux: `pip install bluepy`
+3. Restart Home Assistant
+4. Go to **Settings** → **Devices & Services** → **Integrations**
+5. Click **+ Add Integration** and search for "Radiacode"
+6. Follow the setup wizard
 
 ### Method 2: HACS Installation
 
@@ -180,8 +183,9 @@ automation:
 ## Requirements
 
 - Home Assistant 2023.8 or later
-- Python `radiacode` library version 0.2.0 or later
 - USB or Bluetooth connection to Radiacode device
+- For Bluetooth support: `bluepy` library (Linux only)
+- For USB support: `usb` library (PyUSB)
 
 ## Support
 

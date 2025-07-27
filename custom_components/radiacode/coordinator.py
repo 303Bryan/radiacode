@@ -8,7 +8,7 @@ from typing import Any
 
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
-from radiacode import RadiaCode, RealTimeData, RareData, Spectrum
+from .radiacode_lib import RadiaCode, RealTimeData, RareData, Spectrum
 
 from .const import (
     UPDATE_INTERVAL,
