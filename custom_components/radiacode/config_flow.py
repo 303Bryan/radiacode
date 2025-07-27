@@ -92,7 +92,7 @@ class RadiacodeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 
                 # Test connection
                 try:
-                    from .radiacode_lib import RadiaCode
+                    from radiacode import RadiaCode
                     device = RadiaCode(bluetooth_mac=bluetooth_mac)
                     device_info = {
                         "serial_number": device.serial_number(),
@@ -136,7 +136,7 @@ class RadiacodeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             serial_number = user_input.get(CONF_SERIAL_NUMBER)
             
             try:
-                from .radiacode_lib import RadiaCode
+                from radiacode import RadiaCode
                 device = RadiaCode(serial_number=serial_number)
                 device_info = {
                     "serial_number": device.serial_number(),
