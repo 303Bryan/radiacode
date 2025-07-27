@@ -32,7 +32,8 @@
     },
     "error": {
       "cannot_connect": "Failed to connect to Radiacode device",
-      "invalid_mac": "Invalid Bluetooth MAC address format"
+      "invalid_mac_address": "Invalid Bluetooth MAC address format",
+      "bluetooth_not_supported": "Bluetooth support not available. Install bluepy: pip install bluepy"
     },
     "abort": {
       "already_configured": "Device is already configured"
