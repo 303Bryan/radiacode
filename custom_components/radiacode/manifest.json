@@ -1,0 +1,12 @@
+{
+  "domain": "radiacode",
+  "name": "Radiacode",
+  "documentation": "https://github.com/cdump/radiacode",
+  "dependencies": [],
+  "codeowners": ["@cdump"],
+  "requirements": ["radiacode>=0.2.0"],
+  "version": "1.0.0",
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "loggers": ["radiacode"]
+}

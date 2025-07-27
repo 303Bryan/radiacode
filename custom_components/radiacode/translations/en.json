@@ -1,0 +1,137 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Radiacode Device",
+        "description": "Set up your Radiacode radiation detector integration.",
+        "data": {
+          "name": "Device Name"
+        }
+      },
+      "connection_type": {
+        "title": "Connection Type",
+        "description": "Choose how to connect to your Radiacode device.",
+        "data": {
+          "connection_type": "Connection Type"
+        }
+      },
+      "bluetooth": {
+        "title": "Bluetooth Configuration",
+        "description": "Enter the Bluetooth MAC address of your Radiacode device.",
+        "data": {
+          "bluetooth_mac": "Bluetooth MAC Address"
+        }
+      },
+      "usb": {
+        "title": "USB Configuration",
+        "description": "Configure USB connection to your Radiacode device.",
+        "data": {
+          "serial_number": "Serial Number (Optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Radiacode device",
+      "invalid_mac": "Invalid Bluetooth MAC address format"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "radiacode_count_rate": {
+        "name": "Count Rate"
+      },
+      "radiacode_dose_rate": {
+        "name": "Dose Rate"
+      },
+      "radiacode_temperature": {
+        "name": "Temperature"
+      },
+      "radiacode_battery": {
+        "name": "Battery"
+      },
+      "radiacode_accumulated_dose": {
+        "name": "Accumulated Dose"
+      },
+      "radiacode_spectrum_duration": {
+        "name": "Spectrum Duration"
+      },
+      "radiacode_spectrum_total_counts": {
+        "name": "Spectrum Total Counts"
+      }
+    },
+    "binary_sensor": {
+      "radiacode_alarm_1": {
+        "name": "Alarm 1"
+      },
+      "radiacode_alarm_2": {
+        "name": "Alarm 2"
+      },
+      "radiacode_device_on": {
+        "name": "Device On"
+      }
+    },
+    "switch": {
+      "radiacode_device_power": {
+        "name": "Device Power"
+      },
+      "radiacode_sound": {
+        "name": "Sound"
+      },
+      "radiacode_vibration": {
+        "name": "Vibration"
+      },
+      "radiacode_display": {
+        "name": "Display"
+      }
+    }
+  },
+  "services": {
+    "radiacode_reset_dose": {
+      "name": "Reset Accumulated Dose",
+      "description": "Reset the accumulated dose counter on the Radiacode device"
+    },
+    "radiacode_reset_spectrum": {
+      "name": "Reset Spectrum Data",
+      "description": "Reset the spectrum data on the Radiacode device"
+    },
+    "radiacode_set_display_brightness": {
+      "name": "Set Display Brightness",
+      "description": "Set the display brightness level (0-9) on the Radiacode device",
+      "fields": {
+        "brightness": {
+          "name": "Brightness Level",
+          "description": "Display brightness level from 0 (off) to 9 (maximum)"
+        }
+      }
+    },
+    "radiacode_get_spectrum": {
+      "name": "Get Spectrum Data",
+      "description": "Get current spectrum data from the Radiacode device"
+    },
+    "radiacode_get_energy_calibration": {
+      "name": "Get Energy Calibration",
+      "description": "Get energy calibration coefficients from the Radiacode device"
+    },
+    "radiacode_set_energy_calibration": {
+      "name": "Set Energy Calibration",
+      "description": "Set energy calibration coefficients on the Radiacode device",
+      "fields": {
+        "a0": {
+          "name": "A0 Coefficient",
+          "description": "Constant term coefficient (keV)"
+        },
+        "a1": {
+          "name": "A1 Coefficient",
+          "description": "Linear term coefficient (keV/channel)"
+        },
+        "a2": {
+          "name": "A2 Coefficient",
+          "description": "Quadratic term coefficient (keV/channel²)"
+        }
+      }
+    }
+  }
+}
