@@ -1,0 +1,137 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "RadiaCode Setup",
+        "description": "Configure your RadiaCode radiation detector",
+        "data": {
+          "name": "Device name",
+          "bluetooth_mac": "Bluetooth MAC address (optional)",
+          "serial_number": "USB serial number (optional)"
+        },
+        "data_description": {
+          "bluetooth_mac": "MAC address for Bluetooth connection. Leave empty for USB connection.",
+          "serial_number": "Serial number of specific USB device. Leave empty to connect to first available device."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to RadiaCode device. Please check the device is connected and powered on.",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "RadiaCode Options",
+        "description": "Configure RadiaCode integration options",
+        "data": {
+          "update_interval": "Update interval (seconds)",
+          "spectrum_enabled": "Enable spectrum data collection"
+        },
+        "data_description": {
+          "update_interval": "How often to poll the device for new data (10-300 seconds)",
+          "spectrum_enabled": "Collect and display spectrum analysis data"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dose_rate": {
+        "name": "Dose rate"
+      },
+      "count_rate": {
+        "name": "Count rate"
+      },
+      "spectrum_total_counts": {
+        "name": "Spectrum total counts"
+      },
+      "spectrum_duration": {
+        "name": "Spectrum duration"
+      },
+      "battery_level": {
+        "name": "Battery level"
+      }
+    },
+    "binary_sensor": {
+      "device_connected": {
+        "name": "Device connected"
+      }
+    },
+    "button": {
+      "reset_dose": {
+        "name": "Reset dose"
+      },
+      "reset_spectrum": {
+        "name": "Reset spectrum"
+      }
+    },
+    "select": {
+      "language": {
+        "name": "Language"
+      }
+    },
+    "number": {
+      "display_brightness": {
+        "name": "Display brightness"
+      },
+      "display_off_time": {
+        "name": "Display off time"
+      }
+    }
+  },
+  "services": {
+    "reset_dose": {
+      "name": "Reset accumulated dose",
+      "description": "Reset the accumulated radiation dose measurement on the RadiaCode device."
+    },
+    "reset_spectrum": {
+      "name": "Reset spectrum",
+      "description": "Reset the spectrum data collection on the RadiaCode device."
+    },
+    "set_display_brightness": {
+      "name": "Set display brightness",
+      "description": "Set the display brightness level of the RadiaCode device.",
+      "fields": {
+        "brightness": {
+          "name": "Brightness level",
+          "description": "Display brightness level (0-9)"
+        }
+      }
+    },
+    "set_sound": {
+      "name": "Set sound",
+      "description": "Enable or disable sound notifications on the RadiaCode device.",
+      "fields": {
+        "enabled": {
+          "name": "Sound enabled",
+          "description": "Enable or disable sound notifications"
+        }
+      }
+    },
+    "set_vibration": {
+      "name": "Set vibration",
+      "description": "Enable or disable vibration notifications on the RadiaCode device.",
+      "fields": {
+        "enabled": {
+          "name": "Vibration enabled",
+          "description": "Enable or disable vibration notifications"
+        }
+      }
+    },
+    "set_language": {
+      "name": "Set language",
+      "description": "Set the display language of the RadiaCode device.",
+      "fields": {
+        "language": {
+          "name": "Language",
+          "description": "Device display language"
+        }
+      }
+    }
+  }
+}
