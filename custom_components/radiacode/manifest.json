@@ -1,0 +1,21 @@
+{
+  "domain": "radiacode",
+  "name": "RadiaCode",
+  "codeowners": ["@background_agent"],
+  "config_flow": true,
+  "documentation": "https://github.com/cdump/radiacode",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/cdump/radiacode/issues",
+  "requirements": [
+    "radiacode>=0.3.5"
+  ],
+  "version": "1.0.0",
+  "bluetooth": [
+    {
+      "manufacturer_id": 1337,
+      "service_uuid": "0000180a-0000-1000-8000-00805f9b34fb"
+    }
+  ],
+  "dependencies": ["bluetooth"]
+}

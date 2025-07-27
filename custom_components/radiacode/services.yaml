@@ -1,0 +1,77 @@
+reset_dose:
+  name: Reset accumulated dose
+  description: Reset the accumulated radiation dose measurement on the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+
+reset_spectrum:
+  name: Reset spectrum
+  description: Reset the spectrum data collection on the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+
+set_display_brightness:
+  name: Set display brightness
+  description: Set the display brightness level of the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+  fields:
+    brightness:
+      name: Brightness level
+      description: Display brightness level (0-9)
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 9
+          step: 1
+
+set_sound:
+  name: Set sound
+  description: Enable or disable sound notifications on the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+  fields:
+    enabled:
+      name: Sound enabled
+      description: Enable or disable sound notifications
+      required: true
+      selector:
+        boolean:
+
+set_vibration:
+  name: Set vibration
+  description: Enable or disable vibration notifications on the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+  fields:
+    enabled:
+      name: Vibration enabled
+      description: Enable or disable vibration notifications
+      required: true
+      selector:
+        boolean:
+
+set_language:
+  name: Set language
+  description: Set the display language of the RadiaCode device.
+  target:
+    device:
+      integration: radiacode
+  fields:
+    language:
+      name: Language
+      description: Device display language
+      required: true
+      selector:
+        select:
+          options:
+            - label: English
+              value: "en"
+            - label: Russian
+              value: "ru"
