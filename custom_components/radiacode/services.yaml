@@ -1,0 +1,73 @@
+radiacode_reset_dose:
+  name: Reset Accumulated Dose
+  description: Reset the accumulated dose counter on the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+
+radiacode_reset_spectrum:
+  name: Reset Spectrum Data
+  description: Reset the spectrum data on the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+
+radiacode_set_display_brightness:
+  name: Set Display Brightness
+  description: Set the display brightness level (0-9) on the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+  fields:
+    brightness:
+      name: Brightness Level
+      description: Display brightness level from 0 (off) to 9 (maximum)
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 9
+          step: 1
+
+radiacode_get_spectrum:
+  name: Get Spectrum Data
+  description: Get current spectrum data from the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+
+radiacode_get_energy_calibration:
+  name: Get Energy Calibration
+  description: Get energy calibration coefficients from the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+
+radiacode_set_energy_calibration:
+  name: Set Energy Calibration
+  description: Set energy calibration coefficients on the Radiacode device
+  target:
+    entity:
+      integration: radiacode
+  fields:
+    a0:
+      name: A0 Coefficient
+      description: Constant term coefficient (keV)
+      required: true
+      selector:
+        number:
+          step: 0.001
+    a1:
+      name: A1 Coefficient
+      description: Linear term coefficient (keV/channel)
+      required: true
+      selector:
+        number:
+          step: 0.001
+    a2:
+      name: A2 Coefficient
+      description: Quadratic term coefficient (keV/channel^2)
+      required: true
+      selector:
+        number:
+          step: 0.000001
