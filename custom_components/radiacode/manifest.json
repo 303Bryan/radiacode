@@ -4,7 +4,7 @@
   "documentation": "https://github.com/cdump/radiacode",
   "dependencies": [],
   "codeowners": ["@cdump"],
-  "requirements": ["radiacode>=0.2.0"],
+  "requirements": ["usb", "bluepy"],
   "version": "1.0.0",
   "config_flow": true,
   "iot_class": "local_polling",
