@@ -191,6 +191,12 @@ For issues and feature requests, please:
 2. Verify your device is working with the official Radiacode software
 3. Report issues with detailed logs and device information
 
+## Troubleshooting
+
+If you encounter installation issues with the `bluepy` library (required for Bluetooth support), see the [Troubleshooting Guide](../TROUBLESHOOTING.md) for solutions.
+
+**Quick Fix**: Use USB connection only, which doesn't require `bluepy` and works on all platforms.
+
 ## License
 
 This integration is licensed under the MIT License, same as the underlying Radiacode Python library.
